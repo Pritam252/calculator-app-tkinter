@@ -2,6 +2,8 @@ print("Calculator App for Group Project")
 
 import tkinter as tk
 
+from math import log as log
+
 def basebtn(root, pColor, pTxt, pX, pY, pCmd):
     thisbtn = tk.Button(root, bg = pColor, text = pTxt, command = pCmd)
     thisbtn.config(font=("Segoe UI", 26))
@@ -9,7 +11,7 @@ def basebtn(root, pColor, pTxt, pX, pY, pCmd):
     return thisbtn
 
 def calcbtn(root, pTxt, pX, pY, pCmd):
-    calcbtn = basebtn(root, "blue", pTxt, pX, pY, pCmd)
+    calcbtn = basebtn(root, "#34AEEB", pTxt, pX, pY, pCmd)
     return calcbtn
 
 # The 2 Boxes variable (for convenience)
@@ -88,7 +90,7 @@ def window(root):
     #opbtn_reg(root, 3, 3, '*', cmdbox)
     #opbtn_reg(root, 3, 4, '-', cmdbox)
     #opbtn_reg(root, 3, 5, '+', cmdbox)
-    calc_ops = ['/', '*', '-', '+']
+    calc_ops = ['/', '*', '-', '+', '', 'log']
     for i, operator in enumerate(calc_ops, start=2):
         opbtn_reg(root, 3, i, operator, mCmdBox)
 
@@ -97,7 +99,8 @@ def window(root):
         (7, 0, 3), (8, 1, 3), (9, 2, 3),
         (4, 0, 4), (5, 1, 4), (6, 2, 4),
         (1, 0, 5), (2, 1, 5), (3, 2, 5),
-        ('-', 0, 6), (0, 1, 6), ('.', 2, 6)
+        ('-', 0, 6), (0, 1, 6), ('.', 2, 6),
+        ('(', 0, 7), (')', 1, 7), (',', 2, 7)
     ]
     for num, row, col in numpad:
         opbtn_reg(root, row, col, num, mCmdBox)
@@ -109,7 +112,7 @@ def window(root):
 wnd = tk.Tk()
 
 wnd.title("Calculator app group project v1.2")
-wnd.geometry("296x478")
+wnd.geometry("320x560")
 
 window(wnd)
 
