@@ -4,4 +4,5 @@
 ![screenshot](calculatorapp.png)
 
 ## How to run.
-Execute the main.py file using Python.
+Execute the src/main.py file using Python.
+or execute the min.py file (which is a single file).
