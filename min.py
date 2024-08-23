@@ -32,7 +32,7 @@ def txtbox(root):
     return txtBox
 def calcbox(root, pX, pY):
     box = txtbox(root)
-    box.grid(row=pY, column=pX, sticky='n', columnspan=1000) # LOL, 1000 columnspan. IDK how to make buttons together?
+    box.grid(row=pY, column=pX, sticky='n', columnspan=1000)
     return box
 def evaluatebox():
     global mCmdBox
