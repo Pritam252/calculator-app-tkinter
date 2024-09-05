@@ -4,8 +4,8 @@
 ![screenshot](calculatorapp.png)
 
 ## How to run.
-Execute the src/main.py file using Python.
-or execute the min.py file (which is a single file).
+Execute the all.py file using Python.
+or execute the min.py file (which is the de-prettyfied code).
 
 ## Dependencies.
 Make sure to install tkinter before running this script.
